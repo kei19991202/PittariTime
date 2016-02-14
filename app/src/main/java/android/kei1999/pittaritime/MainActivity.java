@@ -97,6 +97,14 @@ public class MainActivity extends AppCompatActivity {
         num2=num1++;
         mTimeTextView.setText(num2+"秒体感");
         mTimeTextView.setTextColor(Color.BLACK);
+        Log.d("changeNumber",String.valueOf(num2));
+
+    }
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        mTimer.cancel();
 
     }
 }
